@@ -1,0 +1,13 @@
+name: Get Artifact Commit
+description: Extract the commit hash from the output of multinarity/action-download-artifact
+author: OmriSteiner
+inputs:
+  artifacts:
+    description: artifacts object extracted from multinarity/action-download-artifact
+    required: true
+outputs:
+  commit_hash:
+    description: The hash of the commit
+runs:
+  using: node16
+  main: main.js
